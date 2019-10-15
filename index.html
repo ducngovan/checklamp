@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAMP</title>
+</head>
+<body>
+<script>
+    function switchButton() {
+    this.switchOff = function (lamp) {
+        lamp.lampOff();
+    };
+        this.switchOn = function (lamp) {
+           lamp.lampOn();
+        };
+    }
+
+   function lamp() {
+       this.lampOn = function () {
+           alert("den sang");
+       }
+       this.lampOff = function () {
+           alert("den tat")
+       }
+   }
+    var test = new switchButton();
+    var demo = new lamp();
+    test.switchOff(demo);
+    test.switchOn(demo);
+    </script>
+</body>
+</html>
